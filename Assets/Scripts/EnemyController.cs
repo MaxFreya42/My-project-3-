@@ -13,10 +13,19 @@ public class EnemyController : MonoBehaviour
 
     bool chase = false;
 
-    
+    [SerializeField] private Transform AiPath;
+    public static Transform[] paths { get; private set; }
+
 
     private void Start()
     {
+        int n = AiPath.childCount;
+        paths = new Transform[n];
+        for (int i = 0; i < n; ++i)
+        {
+            paths[i] = AiPath.GetChild(i);
+        }
+
         gameManager = GetComponent<GameManager>();
         myAgent = GetComponent<NavMeshAgent>();
         SetNextTarget();
@@ -37,9 +46,9 @@ public class EnemyController : MonoBehaviour
 
     public void SetNextTarget()
     {
-        currentTargetPath = ++ currentTargetPath % GameManager.paths.Length;
+        currentTargetPath = ++ currentTargetPath % paths.Length;
 
-        myAgent.SetDestination(GameManager.paths[currentTargetPath].position);
+        myAgent.SetDestination(paths[currentTargetPath].position);
     }
 
     //private void OnTriggerStay(Collider other)

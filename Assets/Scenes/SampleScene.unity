@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 210335578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.54, y: 0.18, z: 21.14}
+  m_LocalPosition: {x: 7.54, y: -0.02, z: 21.14}
   m_LocalScale: {x: 83.74, y: 0.54, z: 23.44}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -326,7 +326,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 300
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -334,7 +334,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 2
+  m_ObstacleAvoidanceType: 3
 --- !u!54 &349571940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbff8593d816f84bb10c3fb468499f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AiPath: {fileID: 1864689769}
 --- !u!135 &349571946
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -863,8 +864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  mouseSensX: 8.35
-  mouseSensY: 8.35
+  mouseSensX: 17.12
+  mouseSensY: 17.21
   followTarget: {fileID: 2099730015}
   bulletPrefab: {fileID: 3768431096739046931, guid: 745ab3c38fe270d428f51c1a1086797a, type: 3}
   bulletForce: 15
@@ -1208,8 +1209,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892984923}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.635723, y: 26.817879, z: -0.6455742}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.635723, y: 26.817879, z: -0.6455741}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2151,5 +2152,5 @@ SceneRoots:
   - {fileID: 646060108}
   - {fileID: 349571944}
   - {fileID: 2042629823}
-  - {fileID: 1864689769}
   - {fileID: 892984925}
+  - {fileID: 1864689769}
